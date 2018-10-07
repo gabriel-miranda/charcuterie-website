@@ -1,0 +1,59 @@
+{
+  "name": "charcuterie-website",
+  "version": "1.0.0",
+  "description": "Next.js / headless cms based website for a local charcuterie. ",
+  "main": "server/index.js",
+  "scripts": {
+    "start:dev": "concurrently \"npm run dev\" \"npm run lint:watch\"",
+    "dev": "nodemon --config nodemon.json server/index.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server/index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:watch": "esw -w .",
+    "test": "NODE_ENV=test jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "y"
+  },
+  "keywords": [
+    "chesa",
+    "las",
+    "cuatro",
+    "b",
+    "charcuterie",
+    "next",
+    "cms",
+    "headless",
+    "react"
+  ],
+  "author": "gabriel-miranda <gabmirdev@gmail.com>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "compression": "^1.7.3",
+    "express": "^4.16.3",
+    "next": "^7.0.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "styled-components": "^3.4.9"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-inline-react-svg": "^0.5.4",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-styled-components": "^1.8.0",
+    "concurrently": "^4.0.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-import-resolver-babel-module": "^4.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-watch": "^4.0.2",
+    "nodemon": "^1.18.4"
+  }
+}
