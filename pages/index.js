@@ -1,3 +1,4 @@
 import React from 'react';
+import Home from 'components/Home';
 
-export default () => <h1>Welcome to charcuterie website!</h1>;
+export default () => <Home />;
