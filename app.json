@@ -7,7 +7,7 @@
       "required": false
     },
     "BASE_URL": {
-      "required": false
+      "required": true
     },
     "SPACE": {
       "required": true
