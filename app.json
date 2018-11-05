@@ -1,0 +1,35 @@
+{
+  "name": "auth0-homepage",
+  "scripts": {
+  },
+  "env": {
+    "PORT": {
+      "required": false
+    },
+    "BASE_URL": {
+      "required": false
+    },
+    "SPACE": {
+      "required": true
+    },
+    "ACCESS_TOKEN": {
+      "required": true
+    },
+    "CACHE_MAX_AGE": {
+      "required": false
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
