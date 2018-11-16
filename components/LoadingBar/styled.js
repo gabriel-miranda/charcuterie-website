@@ -1,11 +1,16 @@
 import styled from 'styled-components';
+import {
+  sizes,
+  positions,
+  colors,
+  transitions,
+  zindex,
+} from 'theme';
 
 export default styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: #eb5424;
-  height: .5rem;
-  transition: all .2s ease-in-out;
-  z-index: 99999;
+  ${positions.loading_bar}
+  background: ${colors.loading_bar};
+  height: ${sizes.loading_bar};
+  transition: ${transitions.loading_bar};
+  z-index: ${zindex.loading_bar};
 `;

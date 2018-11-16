@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'next/link';
+import ActiveLink from 'components/ActiveLink';
 import { ListItem, StyledLink } from './styled';
 
 const NavItem = ({ text, link }) => (
   <ListItem key={link}>
-    <Link href={link}>
+    <ActiveLink href={link}>
       <StyledLink href={link}>
         { text }
       </StyledLink>
-    </Link>
+    </ActiveLink>
   </ListItem>
 );
 

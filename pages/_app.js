@@ -33,6 +33,8 @@ class MyApp extends App {
       menu,
     } = this.props;
 
+    _menu = menu;
+
     return (
       <Container>
         <Layout menu={menu}>
