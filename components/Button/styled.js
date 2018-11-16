@@ -3,6 +3,7 @@ import {
   colors,
   sizes,
   borders,
+  media,
 } from 'theme';
 
 function getTextColor({ theme, solid }) {
@@ -25,7 +26,7 @@ export const StyledLink = styled.a`
   width: ${({ full }) => full ? sizes.button.full : 'initial'};
   color: ${getTextColor};
   border: ${({ solid }) => solid ? 'none' : borders.button};
-  padding: ${sizes.button.padding};
+  padding: ${sizes.button.padding.small};
   border-radius: ${sizes.button.radius};
   letter-spacing: ${sizes.button.lspacing};
   text-transform: uppercase;
@@ -36,6 +37,9 @@ export const StyledLink = styled.a`
   &:active {
     background: ${getBackgroundColor(colors.button.solid.bg_dark)}
   }
+  ${media.sm`
+    padding: ${sizes.button.padding.small} ${sizes.button.padding.big};
+  `}
 `;
 
 export const StyledButton = StyledLink.withComponent('button');

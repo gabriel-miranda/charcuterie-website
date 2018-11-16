@@ -50,7 +50,7 @@ const TRANSITIONS = {
 
 export const sizes = {
   screen: {
-    sm: 300,
+    sm: 500,
     md: 900,
     lg: 1200,
   },
@@ -59,15 +59,24 @@ export const sizes = {
     margin: '30px 50px',
   },
   hero: {
-    padding: '280px 50px 215px',
+    padding: {
+      big: '280px 50px 215px',
+      small: '200px 25px 150px',
+    },
     title: {
-      font: '40px',
+      font: {
+        big: '40px',
+        small: '30px',
+      },
       weight: '400',
       lspacing: '8px',
     },
     subtitle: {
       width: '750px',
-      font: '16px',
+      font: {
+        big: '16px',
+        small: '14px',
+      },
       lspacing: '2px',
       line_height: '1.8em',
       margin_bottom: '3em',
@@ -97,7 +106,10 @@ export const sizes = {
   button: {
     font: '16px',
     full: '100%',
-    padding: '1.5em 5em',
+    padding: {
+      small: '1.5em',
+      big: '5em',
+    },
     radius: '50px',
     lspacing: '2px',
   },
