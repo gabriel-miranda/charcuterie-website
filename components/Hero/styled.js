@@ -14,6 +14,7 @@ export const StyledHero = styled.div`
   padding: ${sizes.hero.padding};
   background: url(${images.hero.background}) no-repeat center center;
   color: ${colors.hero.text};
+  background-size: cover;
 `;
 
 export const Overlay = styled.div`

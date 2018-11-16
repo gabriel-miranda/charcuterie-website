@@ -55,7 +55,7 @@ export const sizes = {
     lg: 1200,
   },
   logo: {
-    width: '80px',
+    width: '75px',
     margin: '30px 50px',
   },
   hero: {
