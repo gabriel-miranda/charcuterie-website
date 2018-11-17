@@ -6,6 +6,7 @@ import {
   zindex,
   transitions,
   colors,
+  media,
 } from 'theme';
 
 export const SubHeader = styled.div`
@@ -30,9 +31,24 @@ export const List = styled.ul`
   width: ${sizes.nav.list.width};
   max-width: 100%;
   margin: 0;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-around;
+  ${media.md`
+    display: flex;
+  `}
+`;
+
+export const ListMobile = styled.ul`
+  width: ${sizes.nav.list.width};
+  max-width: 100%;
+  margin: 0;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  ${media.md`
+    display: none;
+  `}
 `;
 
 export const WaypointContainer = styled.div`

@@ -22,6 +22,10 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     list-style: none;
   }
+  button:active,
+  button:focus {
+    outline: none;
+  }
 `;
 
 class MyApp extends App {

@@ -134,6 +134,9 @@ export const sizes = {
     radius: '50px',
     lspacing: '2px',
   },
+  hamburger: {
+    width: '55px',
+  },
 };
 
 export const colors = {
