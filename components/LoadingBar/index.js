@@ -51,6 +51,7 @@ export default class LoadingBar extends React.Component {
   }
 
   done = () => {
+    clearInterval(this.increment);
     this.setState({ progress: 100 }, this.hide);
   }
 
