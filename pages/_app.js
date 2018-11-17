@@ -3,8 +3,26 @@ import React from 'react';
 import Layout from 'components/Layout';
 import LoadingBar from 'components/LoadingBar';
 import Client from 'modules/client/main';
+import { createGlobalStyle } from 'styled-components';
 
 let _menu = null;
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    font-family: Montserrat, Helvetica, sans-serif;
+  }
+  strong {
+    font-weight: 600;
+  }
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+`;
 
 class MyApp extends App {
   static async getInitialProps(appContext) {
@@ -37,8 +55,9 @@ class MyApp extends App {
 
     return (
       <Container>
+        <GlobalStyle />
+        <LoadingBar />
         <Layout menu={menu}>
-          <LoadingBar />
           <Component {...pageProps} />
         </Layout>
       </Container>

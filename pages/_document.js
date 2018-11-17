@@ -1,23 +1,6 @@
 import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
-import { ServerStyleSheet, createGlobalStyle } from 'styled-components';
-
-const GlobalStyle = createGlobalStyle`
-  * {
-    box-sizing: border-box;
-  }
-  html,
-  body {
-    font-family: Montserrat, Helvetica, sans-serif;
-  }
-  strong {
-    font-weight: 600;
-  }
-  ul {
-    padding: 0;
-    list-style: none;
-  }
-`;
+import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -49,7 +32,6 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700"
           />
-          <GlobalStyle />
           {this.props.styleTags}
         </Head>
         <body>
