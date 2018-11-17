@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import ActiveLink from 'components/ActiveLink';
 import { ListItem, StyledLink } from './styled';
 
-const NavItem = ({ text, link }) => (
-  <ListItem key={link}>
+const NavItem = ({ text, link, small }) => (
+  <ListItem>
     <ActiveLink href={link}>
-      <StyledLink href={link}>
+      <StyledLink href={link} small={small}>
         { text }
       </StyledLink>
     </ActiveLink>
@@ -16,6 +16,11 @@ const NavItem = ({ text, link }) => (
 NavItem.propTypes = {
   text: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
+  small: PropTypes.bool,
+};
+
+NavItem.defaultProps = {
+  small: false,
 };
 
 export default NavItem;

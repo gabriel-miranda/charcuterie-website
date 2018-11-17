@@ -6,6 +6,9 @@ const SIZES = {
       border: 2,
     },
   },
+  subheader: {
+    height: 50,
+  },
 };
 
 const COLORS = {
@@ -37,15 +40,23 @@ const POSITIONS = {
     left: 0;
     right: 0;
   `,
+  absolute_top_50: `
+    position: absolute;
+    top: ${SIZES.subheader.height}px;
+    left: 0;
+    right: 0;
+  `,
   fixed_top: `
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
   `,
 };
 
 const TRANSITIONS = {
   main: 'all .2s ease-in',
+  background: 'background-color .2s ease-in',
 };
 
 export const sizes = {
@@ -55,8 +66,14 @@ export const sizes = {
     lg: 1200,
   },
   logo: {
-    width: '75px',
-    margin: '30px 50px',
+    width: {
+      big: '75px',
+      small: '35px',
+    },
+    margin: {
+      big: '30px 50px',
+      small: '20px 50px',
+    },
   },
   hero: {
     padding: {
@@ -88,7 +105,8 @@ export const sizes = {
   },
   loading_bar: '.5rem',
   subheader: {
-    height: '50px',
+    height: `${SIZES.subheader.height}px`,
+    width: '100%',
   },
   nav: {
     list: {
@@ -96,7 +114,10 @@ export const sizes = {
     },
     item: {
       width: '175px',
-      padding: `${65 - SIZES.nav.item.border}px 40px`,
+      padding: {
+        big: `${65 - SIZES.nav.item.border}px 40px`,
+        small: `${32 - SIZES.nav.item.border}px 40px`,
+      },
       border: SIZES.nav.item.border,
       font: '13px',
       lspacing: '2px',
@@ -122,6 +143,10 @@ export const colors = {
   },
   overlay: COLORS.black_60,
   loading_bar: COLORS.main_green,
+  nav: {
+    small: COLORS.black_60,
+    big: 'transparent',
+  },
   nav_item: {
     active: COLORS.white,
     default: COLORS.white_70,
@@ -152,17 +177,23 @@ export const images = {
 export const positions = {
   overlay: POSITIONS.absolute_center,
   loading_bar: POSITIONS.fixed_top,
-  nav: POSITIONS.absolute_top,
+  nav: POSITIONS.absolute_top_50,
+  nav_fixed: POSITIONS.fixed_top,
+  subheader: POSITIONS.absolute_top,
+  waypoint: POSITIONS.absolute_top_50,
 };
 
 export const zindex = {
   hero_content: 1,
   nav: 2,
+  subheader: 2,
   loading_bar: 999,
 };
 
 export const transitions = {
   loading_bar: TRANSITIONS.main,
+  nav: TRANSITIONS.background,
+  nav_item: TRANSITIONS.main,
 };
 
 export const borders = {

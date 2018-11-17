@@ -4,16 +4,22 @@ import {
   borders,
   positions,
   zindex,
+  transitions,
+  colors,
 } from 'theme';
 
 export const SubHeader = styled.div`
-  width: 100%;
+  ${positions.subheader}
+  width: ${sizes.subheader.width};
   height: ${sizes.subheader.height};
+  z-index: ${zindex.subheader};
   border-bottom: ${borders.subheader};
 `;
 
 export const NavList = styled.nav`
-  ${positions.nav}
+  ${({ small }) => small ? positions.nav_fixed : positions.nav}
+  background-color: ${({ small }) => small ? colors.nav.small : colors.nav.big};
+  transition: ${transitions.nav};
   z-index: ${zindex.nav};
   display: flex;
   flex-direction: column;
@@ -27,4 +33,8 @@ export const List = styled.ul`
   display: flex;
   align-items: center;
   justify-content: space-around;
+`;
+
+export const WaypointContainer = styled.div`
+  ${positions.waypoint}
 `;
