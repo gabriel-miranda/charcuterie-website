@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Nav from 'components/Nav';
+import Footer from 'components/Footer';
 
 const Layout = ({ children, menu }) => (
   <Fragment>
@@ -8,6 +9,7 @@ const Layout = ({ children, menu }) => (
     <main>
       { children }
     </main>
+    <Footer />
   </Fragment>
 );
 
