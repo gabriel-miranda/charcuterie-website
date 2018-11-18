@@ -6,7 +6,6 @@ import Carousel from 'components/Carousel';
 import SectionTitle from 'components/SectionTitle';
 import Section, { SectionBlock } from 'components/Section';
 import SectionDescription from 'components/SectionDescription';
-import { colors } from 'theme';
 
 const Home = ({ products }) => (
   <Fragment>
@@ -25,7 +24,6 @@ const Home = ({ products }) => (
         </SectionDescription>
         <Button
           href="/nosotros"
-          theme={colors.button.transparent.font.green}
           solid={false}
           small
         >
@@ -47,9 +45,7 @@ const Home = ({ products }) => (
         </SectionDescription>
       </SectionBlock>
     </Section>
-    <Carousel>
-
-    </Carousel>
+    <Carousel products={products} />
   </Fragment>
 );
 

@@ -12,6 +12,7 @@ export const StyledHero = styled.div`
   background-size: cover;
   padding: ${sizes.hero.padding.small};
   background: url(${images.hero.background}) no-repeat center center;
+  background-attachment: fixed;
   color: ${colors.hero.text};
   background-size: cover;
   ${media.md`
