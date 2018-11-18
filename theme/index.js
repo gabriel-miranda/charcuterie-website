@@ -169,6 +169,7 @@ export const colors = {
       },
     },
   },
+  em: COLORS.main_green_dark,
 };
 
 export const images = {

@@ -5,7 +5,7 @@ import Hamburger from 'components/Hamburger';
 import MobileNavContainer from './styled';
 
 const renderNavItem = handleMenuClick => item => (
-  <NavItem {...item} mobile onClick={handleMenuClick} />
+  <NavItem {...item} mobile onClick={handleMenuClick} key={item.link} />
 );
 
 const MobileNav = ({

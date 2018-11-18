@@ -10,7 +10,7 @@ function getTextColor({ theme, solid }) {
   if (solid) {
     return colors.button.solid.font;
   }
-  return colors.button.transparent.font[theme] || colors.button.solid.font;
+  return theme || colors.button.solid.font;
 }
 
 function getBackgroundColor(color) {
@@ -26,7 +26,7 @@ export const StyledLink = styled.a`
   width: ${({ full }) => full ? sizes.button.full : 'initial'};
   color: ${getTextColor};
   border: ${({ solid }) => solid ? 'none' : borders.button};
-  padding: ${sizes.button.padding.small};
+  padding: ${sizes.button.padding.small} 2.5em;
   border-radius: ${sizes.button.radius};
   letter-spacing: ${sizes.button.lspacing};
   text-transform: uppercase;

@@ -4,6 +4,7 @@ import Layout from 'components/Layout';
 import LoadingBar from 'components/LoadingBar';
 import Client from 'modules/client/main';
 import { createGlobalStyle } from 'styled-components';
+import { colors } from 'theme';
 
 let _menu = null;
 
@@ -14,6 +15,11 @@ const GlobalStyle = createGlobalStyle`
   html,
   body {
     font-family: Montserrat, Helvetica, sans-serif;
+    color: #252525;
+  }
+  em {
+    font-style: normal;
+    color: ${colors.em};
   }
   strong {
     font-weight: 600;
@@ -21,6 +27,9 @@ const GlobalStyle = createGlobalStyle`
   ul {
     padding: 0;
     list-style: none;
+  }
+  img {
+    max-width: 100%;
   }
   button:active,
   button:focus {
