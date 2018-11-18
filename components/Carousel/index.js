@@ -10,7 +10,7 @@ const Carousel = ({ products }) => (
   <StyledCarousel>
     <Overlay>
       <ProductContainer>
-        {Array(3).fill().map(i => <ProductCard />)}
+        {Array(3).fill().map(ProductCard)}
       </ProductContainer>
       <Button
         small

@@ -35,6 +35,26 @@ const GlobalStyle = createGlobalStyle`
   button:focus {
     outline: none;
   }
+  ::-webkit-input-placeholder {
+    text-transform: uppercase;
+    font-size: 13px;
+    color: ${colors.em};
+  }
+  ::-moz-placeholder {
+    text-transform: uppercase;
+    font-size: 13px;
+    color: ${colors.em};
+  }
+  :-ms-input-placeholder {
+    text-transform: uppercase;
+    font-size: 13px;
+    color: ${colors.em};
+  }
+  textarea {
+    resize: vertical;
+    min-height: 50px;
+    height: 300px;
+  }
 `;
 
 class MyApp extends App {

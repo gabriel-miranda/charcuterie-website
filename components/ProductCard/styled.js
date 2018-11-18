@@ -6,7 +6,7 @@ export const CardContainer = styled.div`
   border-radius: 5px;
   text-align: center;
   margin-bottom: 50px;
-  box-shadow: 0 0 10px rgba(0,0,0,.6);
+  box-shadow: 0 3px 10px rgba(0,0,0,.2);
   display: flex;
   flex-direction: column;
   overflow: hidden;

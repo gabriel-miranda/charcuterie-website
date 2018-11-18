@@ -17,5 +17,6 @@ export const ProductContainer = styled.div`
   align-items: center;
   ${media.md`
     flex-direction: row;
+    flex-wrap: wrap;
   `}
 `;

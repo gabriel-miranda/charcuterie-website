@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import Overlay from 'components/Overlay';
 import { StyledHero } from './styled';
 
-const Hero = ({ children }) => (
-  <StyledHero>
+const Hero = ({ children, small }) => (
+  <StyledHero small={small}>
     <Overlay>
       { children }
     </Overlay>
@@ -12,11 +12,12 @@ const Hero = ({ children }) => (
 );
 
 Hero.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
+  small: PropTypes.bool,
 };
 
 Hero.defaultProps = {
-  children: null,
+  small: false,
 };
 
 export default Hero;

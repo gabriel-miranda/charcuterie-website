@@ -1,4 +1,15 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Hero from 'components/Hero';
+import HeroTitle from 'components/HeroTitle';
+import ContactForm from 'components/ContactForm';
 
-export default () => <Hero />;
+export default () => (
+  <Fragment>
+    <Hero small>
+      <HeroTitle>
+        Contacto
+      </HeroTitle>
+    </Hero>
+    <ContactForm />
+  </Fragment>
+);

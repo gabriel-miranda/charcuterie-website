@@ -1,16 +1,14 @@
 import React from 'react';
 import Button from 'components/Button';
-import {
-  Title,
-  SubTitle,
-} from './styled';
+import HeroTitle from 'components/HeroTitle';
+import { SubTitle } from './styled';
 import Hero from './index';
 
 export default () => (
   <Hero>
-    <Title>
+    <HeroTitle>
       <strong>Calidad</strong> en Fiambres
-    </Title>
+    </HeroTitle>
     <SubTitle>
       Más de 60 años de perfeccionamiento elaborando Fiambres que
       se destacan por su <strong>noble sabor y genuina calidad</strong>

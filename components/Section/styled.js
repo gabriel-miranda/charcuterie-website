@@ -6,7 +6,7 @@ export default styled.section`
   margin: 0 auto;
   flex-direction: column;
   background: #fff;
-  padding: 50px 25px;
+  padding: ${({ small }) => small ? '50px 25px 0 25px' : '50px 25px'};
   max-width: 100%;
   width: 1440px;
   text-align: center;
