@@ -1,17 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  StyledHero,
-  Content,
-  Overlay,
-} from './styled';
+import Overlay from 'components/Overlay';
+import { StyledHero } from './styled';
 
 const Hero = ({ children }) => (
   <StyledHero>
-    <Content>
+    <Overlay>
       { children }
-    </Content>
-    <Overlay />
+    </Overlay>
   </StyledHero>
 );
 

@@ -18,14 +18,19 @@ SectionBlock.defaultProps = {
 };
 
 
-const Section = ({ children }) => (
-  <StyledSection>
+const Section = ({ children, small }) => (
+  <StyledSection small={small}>
     { children }
   </StyledSection>
 );
 
 Section.propTypes = {
   children: PropTypes.node.isRequired,
+  small: PropTypes.bool,
+};
+
+Section.defaultProps = {
+  small: false,
 };
 
 export default Section;

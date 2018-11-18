@@ -3,8 +3,6 @@ import {
   sizes,
   images,
   colors,
-  positions,
-  zindex,
   media,
 } from 'theme';
 
@@ -19,16 +17,6 @@ export const StyledHero = styled.div`
   ${media.md`
     padding: ${sizes.hero.padding.big};
   `}
-`;
-
-export const Overlay = styled.div`
-  ${positions.overlay}
-  background: ${colors.overlay};
-`;
-
-export const Content = styled.div`
-  position: relative;
-  z-index: ${zindex.hero_content};
 `;
 
 export const Title = styled.h2`

@@ -19,6 +19,13 @@ function getBackgroundColor(color) {
   };
 }
 
+function getPadding({ small }) {
+  if (small) {
+    return `${sizes.button.padding.small} 2.5em`;
+  }
+  return `${sizes.button.padding.small} ${sizes.button.padding.big}`;
+}
+
 export const StyledLink = styled.a`
   display: inline-block;
   background: ${getBackgroundColor(colors.button.solid.bg)};
@@ -38,7 +45,7 @@ export const StyledLink = styled.a`
     background: ${getBackgroundColor(colors.button.solid.bg_dark)}
   }
   ${media.sm`
-    padding: ${sizes.button.padding.small} ${sizes.button.padding.big};
+    padding: ${getPadding};
   `}
 `;
 

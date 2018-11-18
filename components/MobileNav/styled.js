@@ -6,6 +6,6 @@ export default styled.div`
   height: 100%;
   left: ${({ open }) => open ? '0' : '-220px'};
   background: rgba(0,0,0,.5);
-  padding: ${({ small }) => small ? '75px' : '180px'} 0 0;
+  padding: ${({ small }) => small ? '75px' : '150px'} 0 0;
   transition: all .2s ease-in;
 `;

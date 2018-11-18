@@ -1,12 +1,14 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import Hero from 'components/Hero/Home';
-import Section, { SectionBlock } from 'components/Section';
-import SectionTitle from 'components/SectionTitle';
-import SectionDescription from 'components/SectionDescription';
 import Button from 'components/Button';
+import Carousel from 'components/Carousel';
+import SectionTitle from 'components/SectionTitle';
+import Section, { SectionBlock } from 'components/Section';
+import SectionDescription from 'components/SectionDescription';
 import { colors } from 'theme';
 
-export default () => (
+const Home = ({ products }) => (
   <Fragment>
     <Hero />
     <Section>
@@ -25,6 +27,7 @@ export default () => (
           href="/nosotros"
           theme={colors.button.transparent.font.green}
           solid={false}
+          small
         >
           Leer más
         </Button>
@@ -33,7 +36,7 @@ export default () => (
         <img src="/static/nosotros.jpg" alt="Fiambres" />
       </SectionBlock>
     </Section>
-    <Section>
+    <Section small>
       <SectionBlock center>
         <SectionTitle>
           Nuestros productos
@@ -44,5 +47,17 @@ export default () => (
         </SectionDescription>
       </SectionBlock>
     </Section>
+    <Carousel>
+
+    </Carousel>
   </Fragment>
 );
+
+Home.propTypes = {
+  products: PropTypes.shape({
+    code: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
+export default Home;

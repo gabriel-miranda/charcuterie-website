@@ -5,7 +5,7 @@ export default styled.div`
   position: absolute;
   left: 25px;
   z-index: 10;
-  transform: translateY(3px) scale(.7);
+  transform: scale(.7);
   ${media.sm`
     transform: none;
   `}
@@ -13,7 +13,7 @@ export default styled.div`
     display: none;
   `}
   .hamburger {
-    padding: 15px 0;
+    padding: 18px 0 15px;
     display: inline-block;
     cursor: pointer;
     transition-property: opacity, filter;

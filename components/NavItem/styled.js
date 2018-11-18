@@ -13,14 +13,13 @@ export const ListItem = styled.li`
 export const StyledLink = styled.a`
   position: relative;
   display: inline-block;
-  font-size: ${sizes.nav.item.font};
+  font-size: ${({ small }) => small ? '11px' : sizes.nav.item.font};
   font-weight: ${sizes.nav.item.weight};
   letter-spacing: ${sizes.nav.item.lspacing};
   color: ${({ active }) => active ? colors.nav_item.active : colors.nav_item.default};
   transition: ${transitions.nav_item};
   text-transform: uppercase;
   text-decoration: none;
-
   background: ${({ active }) => active ? 'rgba(255,255,255,.3)' : 'transparent'};
   padding: 20px 30px;
   width: 220px;
