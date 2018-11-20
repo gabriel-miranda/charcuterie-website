@@ -21,7 +21,7 @@ function getBackgroundColor(color) {
 
 function getPadding({ small }) {
   if (small) {
-    return `${sizes.button.padding.small} 2.5em`;
+    return `${sizes.button.padding.small} ${sizes.button.padding.medium}`;
   }
   return `${sizes.button.padding.small} ${sizes.button.padding.big}`;
 }
@@ -33,7 +33,7 @@ export const StyledLink = styled.a`
   width: ${({ full }) => full ? sizes.button.full : 'initial'};
   color: ${getTextColor};
   border: ${({ solid }) => solid ? 'none' : borders.button};
-  padding: ${sizes.button.padding.small} 2.5em;
+  padding: ${getPadding({ small: true })};
   border-radius: ${sizes.button.radius};
   letter-spacing: ${sizes.button.lspacing};
   text-transform: uppercase;

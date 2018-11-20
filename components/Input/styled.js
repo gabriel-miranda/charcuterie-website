@@ -1,14 +1,18 @@
 import styled from 'styled-components';
-import { colors } from 'theme';
+import {
+  colors,
+  sizes,
+  borders,
+} from 'theme';
 
 export const StyledInput = styled.input`
-  width: 100%;
-  line-height: 50px;
-  padding: 0 20px;
+  width: ${sizes.input.width};
+  line-height: ${sizes.input.lheight};
+  padding: ${sizes.input.padding};
   color: ${colors.input};
-  border: 1px solid;
-  border-radius: 5px;
-  margin-bottom: 30px;
+  border: ${borders.input};
+  border-radius: ${sizes.input.radius};
+  margin-bottom: ${sizes.input.margin_bottom};
   &:focus {
     outline: none;
   }

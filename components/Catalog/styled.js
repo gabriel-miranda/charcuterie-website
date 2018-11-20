@@ -1,5 +1,8 @@
 import styled from 'styled-components';
-import { media } from 'theme';
+import {
+  media,
+  sizes,
+} from 'theme';
 
 export default styled.div`
   display: flex;
@@ -7,9 +10,9 @@ export default styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0 25px 50px;
+  padding: ${sizes.catalog.padding.small};
   ${media.md`
     flex-direction: row;
-    padding: 0 50px 50px;
+    padding: ${sizes.catalog.padding.big};
   `};
 `;

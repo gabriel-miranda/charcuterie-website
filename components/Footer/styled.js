@@ -1,29 +1,33 @@
 import styled from 'styled-components';
-import { colors } from 'theme';
+import {
+  colors,
+  sizes,
+  borders,
+} from 'theme';
 
 export const StyledFooter = styled.footer`
-  background: ${colors.footer};
-  color: #fff;
+  background: ${colors.footer.bg};
+  color: ${colors.footer.font};
 `;
 
 export const FooterContainter = styled.div`
-  width: 1440px;
+  width: ${sizes.footer.width};
+  padding: ${sizes.footer.padding};
   margin: 0 auto;
   max-width: 100%;
-  padding: 0 20px 0;
 `;
 
 export const SubFooter = styled.div`
-  height: 50px;
+  height: ${sizes.subfooter.height};
+  border-top: ${borders.subfooter};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-top: 1px solid #fff;
 `;
 
 export const SubFooterText = styled.p`
-  font-size: 13px;
-  line-height: 50px;
+  font-size: ${sizes.subfooter.font};
+  line-height: ${sizes.subfooter.lheight};
+  letter-spacing: ${sizes.subfooter.lspacing};
   margin: 0;
-  letter-spacing: 1.5px;
 `;

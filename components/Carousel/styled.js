@@ -1,11 +1,15 @@
 import styled from 'styled-components';
-import { media } from 'theme';
+import {
+  media,
+  images,
+  sizes,
+} from 'theme';
 
-export default styled.div`
-  text-align: center;
+const StyledCarousel = styled.div`
   position: relative;
-  padding: 50px;
-  background: url('/static/productos.jpg') no-repeat;
+  padding: ${sizes.carousel.padding};
+  text-align: center;
+  background: url(${images.carousel.background}) center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
 `;
@@ -20,3 +24,5 @@ export const ProductContainer = styled.div`
     flex-wrap: wrap;
   `}
 `;
+
+export default StyledCarousel;

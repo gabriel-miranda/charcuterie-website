@@ -10,14 +10,14 @@ export const StyledHero = styled.div`
   position: relative;
   text-align: center;
   background-size: cover;
-  padding: ${({ small }) => small ? '210px 50px 50px' : sizes.hero.padding.small};
+  margin: ${({ small }) => small ? sizes.hero.margin.props_small : sizes.hero.margin.big};
+  padding: ${({ small }) => small ? sizes.hero.padding.props_small.small : sizes.hero.padding.small};
   background: url(${images.hero.background}) no-repeat center center;
-  background-attachment: fixed;
   color: ${colors.hero.text};
+  background-attachment: fixed;
   background-size: cover;
-  margin: ${({ small }) => small ? '0 0 50px 0' : '0'};
   ${media.md`
-    padding: ${({ small }) => small ? '210px 50px 50px' : sizes.hero.padding.big};
+    padding: ${({ small }) => small ? sizes.hero.padding.props_small.big : sizes.hero.padding.big};
   `}
 `;
 

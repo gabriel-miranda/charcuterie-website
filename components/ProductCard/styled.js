@@ -1,41 +1,46 @@
 import styled from 'styled-components';
+import {
+  sizes,
+  colors,
+  borders,
+} from 'theme';
 
 export const CardContainer = styled.div`
-  width: 300px;
-  background: #fff;
-  border-radius: 5px;
-  text-align: center;
-  margin-bottom: 50px;
-  box-shadow: 0 3px 10px rgba(0,0,0,.2);
+  width: ${sizes.product.card.width};
+  margin: ${sizes.product.card.margin};
+  border-radius: ${sizes.product.card.radius};
+  background: ${colors.product.card};
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  text-align: ce0nter;
+  box-shadow: 0 3px 10px rgba(0,0,0,.2);
 `;
 
 export const ThumbnailContainer = styled.figure`
-  padding: 30px 0;
   max-width: 100%;
+  padding: ${sizes.product.thumb.padding};
 `;
 
 export const CardThumbnail = styled.img`
   max-width: 100%;
-  max-height: 170px;
+  max-height: ${sizes.product.thumb.max_height};
 `;
 
 export const CardDetails = styled.div`
   text-align: left;
-  background: #64d28d;
-  color: #fff;
-  padding: 20px;
+  background: ${colors.product.details.bg};
+  color: ${colors.product.details.font};
+  padding: ${sizes.product.details.padding};
 `;
 
 export const CardTitle = styled.h3`
-  font-size: 15px;
+  font-size: ${sizes.product.title.font};
+  border-bottom: ${borders.card_title};
+  font-weight: ${sizes.product.title.weight};
+  padding: ${sizes.product.title.padding};
+  margin: ${sizes.product.title.margin};
   text-transform: uppercase;
-  padding: 0 0 20px;
-  margin: 0 0 10px;
-  border-bottom: 1px solid #fff;
-  font-weight: 600;
 `;
 
 export const DescriptionContainer = styled.div`
@@ -45,6 +50,6 @@ export const DescriptionContainer = styled.div`
 `;
 
 export const CardDescription = styled.p`
-  font-size: 13px;
+  font-size: ${sizes.product.description.font};
   text-transform: ${({ uppercase }) => uppercase ? 'uppercase' : 'normal'};
 `;
