@@ -11,6 +11,7 @@ export const CardContainer = styled.div`
   border-radius: ${sizes.product.card.radius};
   background: ${colors.product.card};
   display: flex;
+  text-align: center;
   flex-direction: column;
   overflow: hidden;
   text-align: ce0nter;

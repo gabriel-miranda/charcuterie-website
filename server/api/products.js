@@ -16,7 +16,17 @@ router.get('/products', async (req, res) => {
   };
   try {
     const products = await contentful.get(query, key(type, query));
-    res.json(products);
+    res.json(products.map(({
+      code,
+      name,
+      thumbnail: { fields: { file: { url } } },
+      units,
+    }) => ({
+      code,
+      name,
+      thumbnail: url,
+      units,
+    })));
   } catch (e) {
     log.error(e);
     const error = new ServerError();

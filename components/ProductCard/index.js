@@ -13,7 +13,7 @@ import {
 const ProductCard = product => (
   <CardContainer key={product.code}>
     <ThumbnailContainer>
-      <CardThumbnail src="/static/jamon_cocido.jpg" />
+      <CardThumbnail src={`${product.thumbnail}?h=340`} />
     </ThumbnailContainer>
     <CardDetails>
       <CardTitle>
@@ -21,10 +21,10 @@ const ProductCard = product => (
       </CardTitle>
       <DescriptionContainer>
         <CardDescription uppercase>
-          Cod {product.code}
+          Cod. {product.code}
         </CardDescription>
         <CardDescription>
-          5kg./ 4U. x Caja
+          {product.units}
         </CardDescription>
       </DescriptionContainer>
     </CardDetails>
