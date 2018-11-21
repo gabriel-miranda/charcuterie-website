@@ -6,7 +6,7 @@ import CatalogComponent from 'components/Catalog';
 
 export default class Catalog extends Component {
   static async getInitialProps({ api }) {
-    const products = await api.products.get({ limit: 100 });
+    const products = await api.products.get({ count: 100 });
     return { products };
   }
 

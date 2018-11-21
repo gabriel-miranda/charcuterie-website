@@ -4,7 +4,7 @@ import HomeComponent from 'components/Home';
 
 export default class Home extends Component {
   static async getInitialProps({ api }) {
-    const products = await api.products.get({ limit: 3 });
+    const products = await api.products.get({ count: 3 });
     return { products };
   }
 
