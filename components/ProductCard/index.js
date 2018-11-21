@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   CardContainer,
   CardThumbnail,
@@ -9,18 +10,18 @@ import {
   DescriptionContainer,
 } from './styled';
 
-export default () => (
-  <CardContainer>
+const ProductCard = product => (
+  <CardContainer key={product.code}>
     <ThumbnailContainer>
       <CardThumbnail src="/static/jamon_cocido.jpg" />
     </ThumbnailContainer>
     <CardDetails>
       <CardTitle>
-        Jamón cocido
+        {product.name}
       </CardTitle>
       <DescriptionContainer>
         <CardDescription uppercase>
-          Cod 173
+          Cod {product.code}
         </CardDescription>
         <CardDescription>
           5kg./ 4U. x Caja
@@ -29,3 +30,12 @@ export default () => (
     </CardDetails>
   </CardContainer>
 );
+
+ProductCard.propTypes = {
+  product: PropTypes.shape({
+    code: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
+export default ProductCard;

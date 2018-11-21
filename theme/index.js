@@ -214,7 +214,7 @@ export const sizes = {
       padding: '20px',
     },
     thumb: {
-      padding: '0 30px',
+      padding: '30px 0',
       max_height: '170px',
     },
     title: {
@@ -244,7 +244,7 @@ export const sizes = {
     },
     description: {
       font: '16px',
-      linheight: '2',
+      lheight: '2',
       lspacing: '2px',
       margin: '2em',
     },

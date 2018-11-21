@@ -8,10 +8,11 @@ const log = debugLogger('app:api:products');
 const router = express.Router();
 
 router.get('/products', async (req, res) => {
-  const { contentful } = req;
+  const { contentful, query: { count } } = req;
   const type = 'product';
   const query = {
     content_type: type,
+    limit: count,
   };
   try {
     const products = await contentful.get(query, key(type, query));

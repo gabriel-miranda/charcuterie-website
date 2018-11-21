@@ -12,6 +12,7 @@ export default () => (
     <Button
       full
       solid
+      type="button"
     >
       Enviar
     </Button>

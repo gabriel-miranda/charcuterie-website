@@ -10,7 +10,7 @@ const Carousel = ({ products }) => (
   <StyledCarousel>
     <Overlay>
       <ProductContainer>
-        {Array(3).fill().map(ProductCard)}
+        {products.map(ProductCard)}
       </ProductContainer>
       <Button
         small
@@ -25,10 +25,12 @@ const Carousel = ({ products }) => (
 );
 
 Carousel.propTypes = {
-  products: PropTypes.shape({
-    code: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-  }).isRequired,
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      code: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 };
 
 export default Carousel;
