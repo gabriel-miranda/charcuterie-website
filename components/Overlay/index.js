@@ -10,7 +10,7 @@ const Overlay = ({ children }) => [
 ];
 
 Overlay.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 };
 
 export default Overlay;

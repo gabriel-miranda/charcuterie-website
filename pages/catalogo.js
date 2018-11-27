@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Hero from 'components/Hero';
-import HeroTitle from 'components/HeroTitle';
 import CatalogComponent from 'components/Catalog';
 
 export default class Catalog extends Component {
@@ -23,11 +22,7 @@ export default class Catalog extends Component {
     const { products } = this.props;
     return (
       <Fragment>
-        <Hero small>
-          <HeroTitle>
-            Nuestros Productos
-          </HeroTitle>
-        </Hero>
+        <Hero small />
         <CatalogComponent products={products} />
       </Fragment>
     );

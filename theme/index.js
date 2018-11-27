@@ -85,8 +85,8 @@ export const sizes = {
   hero: {
     padding: {
       props_small: {
-        big: `210px ${SIZES.main_padding.big} ${SIZES.main_padding.big}`,
-        small: `210px ${SIZES.main_padding.small} ${SIZES.main_padding.small}`,
+        big: `95px ${SIZES.main_padding.big}`,
+        small: `95px ${SIZES.main_padding.small}`,
       },
       big: `280px ${SIZES.main_padding.big} 215px`,
       small: `200px ${SIZES.main_padding.small} 150px`,

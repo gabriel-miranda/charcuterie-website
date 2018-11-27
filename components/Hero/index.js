@@ -12,11 +12,12 @@ const Hero = ({ children, small }) => (
 );
 
 Hero.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   small: PropTypes.bool,
 };
 
 Hero.defaultProps = {
+  children: null,
   small: false,
 };
 
