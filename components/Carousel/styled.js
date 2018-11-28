@@ -19,6 +19,8 @@ export const ProductContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
   ${media.md`
     flex-direction: row;
     flex-wrap: wrap;

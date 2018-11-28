@@ -17,6 +17,9 @@ const GlobalStyle = createGlobalStyle`
     font-family: Montserrat, Helvetica, sans-serif;
     color: #252525;
   }
+  main {
+    overflow: hidden;
+  }
   em {
     font-style: normal;
     color: ${colors.em};

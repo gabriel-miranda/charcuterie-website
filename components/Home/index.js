@@ -11,7 +11,7 @@ import ContactForm from 'components/ContactForm';
 const Home = ({ products }) => (
   <Fragment>
     <Hero />
-    <AboutUs />
+    <AboutUs full={false} />
     <Section small>
       <SectionBlock center>
         <SectionTitle>

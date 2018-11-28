@@ -15,6 +15,7 @@ const SIZES = {
   },
   container: '1440px',
   nav_item_mobile: '220px',
+  product_margin: '15px',
 };
 
 const COLORS = {
@@ -23,6 +24,7 @@ const COLORS = {
   white_70: 'rgba(255,255,255,.7)',
 
   black: '#252525',
+  black_10: 'rgba(0,0,0,.1)',
   black_60: 'rgba(0,0,0,.6)',
 
   main_green: '#4cbc76',
@@ -90,10 +92,6 @@ export const sizes = {
       },
       big: `280px ${SIZES.main_padding.big} 215px`,
       small: `200px ${SIZES.main_padding.small} 150px`,
-    },
-    margin: {
-      props_small: '0 0 50px',
-      big: '0',
     },
     title: {
       font: {
@@ -175,9 +173,10 @@ export const sizes = {
   },
   catalog: {
     padding: {
-      big: `0 ${SIZES.main_padding.big} ${SIZES.main_padding.big}`,
-      small: `0 ${SIZES.main_padding.small} ${SIZES.main_padding.big}`,
+      big: SIZES.main_padding.big,
+      small: `${SIZES.main_padding.big} ${SIZES.main_padding.small}`,
     },
+    margin: `0 -${SIZES.product_margin}`,
   },
   contact: {
     width: '650px',
@@ -207,7 +206,7 @@ export const sizes = {
   product: {
     card: {
       width: '300px',
-      margin: '0 15px 50px',
+      margin: `0 ${SIZES.product_margin} 50px`,
       radius: '5px',
     },
     details: {
@@ -239,8 +238,8 @@ export const sizes = {
       big: `${SIZES.main_padding.big} ${SIZES.main_padding.small}`,
     },
     padding: {
-      small: `65px ${SIZES.main_padding.big} ${SIZES.main_padding.small} 0`,
-      big: `65px ${SIZES.main_padding.small}`,
+      small: `65px ${SIZES.main_padding.small} ${SIZES.main_padding.small} 0`,
+      big: `65px ${SIZES.main_padding.big}`,
     },
     description: {
       font: '16px',
@@ -315,6 +314,7 @@ export const colors = {
     bg: COLORS.white,
     title: COLORS.black,
   },
+  catalog: COLORS.black_10,
 };
 
 export const images = {

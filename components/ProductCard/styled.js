@@ -14,8 +14,7 @@ export const CardContainer = styled.div`
   text-align: center;
   flex-direction: column;
   overflow: hidden;
-  text-align: ce0nter;
-  box-shadow: 0 3px 10px rgba(0,0,0,.2);
+  text-align: center;
 `;
 
 export const ThumbnailContainer = styled.figure`
@@ -25,7 +24,7 @@ export const ThumbnailContainer = styled.figure`
 
 export const CardThumbnail = styled.img`
   max-width: 100%;
-  max-height: ${sizes.product.thumb.max_height};
+  height: ${sizes.product.thumb.max_height};
 `;
 
 export const CardDetails = styled.div`
@@ -42,6 +41,8 @@ export const CardTitle = styled.h3`
   padding: ${sizes.product.title.padding};
   margin: ${sizes.product.title.margin};
   text-transform: uppercase;
+  line-height: 1.5;
+  min-height: calc(1.5em * 2 + 20px)
 `;
 
 export const DescriptionContainer = styled.div`

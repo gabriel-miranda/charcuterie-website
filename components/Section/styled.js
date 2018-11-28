@@ -11,18 +11,19 @@ export default styled.section`
   flex-direction: column;
   max-width: 100%;
   text-align: center;
-  background: ${colors.section.bg};
+  overflow: hidden;
+  background: ${'none' || colors.section.bg};
   padding: ${({ small }) => small ? sizes.section.padding_mobile.small : sizes.section.padding_mobile.big};
   width: ${sizes.section.width};
   ${media.md`
     padding: ${({ small }) => small ? sizes.section.padding.small : sizes.section.padding.big};
     text-align: left;
     flex-direction: row;
-    align-items: center;
   `}
 `;
 
 export const StyledSectionBlock = styled.div`
+  position: relative;
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;

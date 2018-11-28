@@ -11,6 +11,6 @@ export default styled.form`
   max-width: 100%;
   padding: ${sizes.contact.padding.small};
   ${media.md`
-    padding: ${sizes.contact.padding.small};
+    padding: ${({ center }) => center ? sizes.contact.padding.big : '0'};
   `}
 `;

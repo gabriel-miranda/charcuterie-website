@@ -2,6 +2,7 @@ require('dotenv').config();
 const next = require('next');
 const express = require('express');
 const compression = require('compression');
+const sslRedirect = require('heroku-ssl-redirect');
 const { api } = require('./api');
 const { contentfulMiddleware } = require('./middlewares/contentful');
 const ContentfulWrapper = require('../modules/contentful');
@@ -27,6 +28,8 @@ const contentful = new ContentfulWrapper({
 (async () => {
   await app.prepare();
   const server = express();
+
+  server.use(sslRedirect(['production'], 301));
 
   server.use(compression());
 

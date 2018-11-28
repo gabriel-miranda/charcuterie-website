@@ -3,6 +3,7 @@ import {
   colors,
   sizes,
   borders,
+  media,
 } from 'theme';
 
 export const StyledInput = styled.input`
@@ -15,6 +16,16 @@ export const StyledInput = styled.input`
   margin-bottom: ${sizes.input.margin_bottom};
   &:focus {
     outline: none;
+  }
+  &[type="search"] {
+    margin: 0 0 -25px;
+    padding: 0 20px 0 45px;
+    height: 40px;
+    line-height: 40px;
+    ${media.md`
+      width: 300px;
+      float: right;
+    `}
   }
 `;
 
