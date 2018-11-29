@@ -5,8 +5,9 @@ import {
 
 export default styled.iframe`
   width: 100%;
-  height: 300px;
+  height: 350px;
+  background: #eee;
   ${media.md`
-    height: 600px;
+    height: 545px;
   `}
 `;

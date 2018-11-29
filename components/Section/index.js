@@ -2,24 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import StyledSection, { StyledSectionBlock } from './styled';
 
-export const SectionBlock = ({ children, center }) => (
-  <StyledSectionBlock center={center}>
+export const SectionBlock = ({ children }) => (
+  <StyledSectionBlock>
     { children }
   </StyledSectionBlock>
 );
 
 SectionBlock.propTypes = {
   children: PropTypes.node.isRequired,
-  center: PropTypes.bool,
 };
 
-SectionBlock.defaultProps = {
-  center: false,
-};
-
-
-const Section = ({ children, small }) => (
-  <StyledSection small={small}>
+const Section = ({ children, small, center }) => (
+  <StyledSection small={small} center={center}>
     { children }
   </StyledSection>
 );
@@ -27,9 +21,11 @@ const Section = ({ children, small }) => (
 Section.propTypes = {
   children: PropTypes.node.isRequired,
   small: PropTypes.bool,
+  center: PropTypes.bool,
 };
 
 Section.defaultProps = {
+  center: false,
   small: false,
 };
 

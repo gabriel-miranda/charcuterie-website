@@ -7,8 +7,8 @@ import Button from 'components/Button';
 import { AboutUsImg, AboutTheCompanyImg } from './styled';
 
 const AboutTheCompany = () => [
-  <Section key="section">
-    <SectionBlock center>
+  <Section center key="section">
+    <SectionBlock>
       <SectionTitle>
         Sobre la empresa
       </SectionTitle>
@@ -22,8 +22,8 @@ const AboutTheCompany = () => [
     </SectionBlock>
   </Section>,
   <AboutTheCompanyImg key="company" />,
-  <Section key="section-final">
-    <SectionBlock center>
+  <Section center key="section-final">
+    <SectionBlock>
       <SectionDescription>
         Desde Esperanza, cuna del trabajo nuestros productos respetan
         una receta con más de 60 años de perfeccionamiento, elaborando

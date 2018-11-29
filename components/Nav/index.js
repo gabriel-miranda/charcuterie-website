@@ -4,11 +4,16 @@ import Waypoint from 'react-waypoint';
 import NavItem from 'components/NavItem';
 import NavLogo from 'components/NavLogo';
 import MobileNav from 'components/MobileNav';
+import DeskphoneIcon from 'mdi-react/DeskphoneIcon';
+import FacebookIcon from 'mdi-react/FacebookBoxIcon';
 import {
   NavList,
   List,
   ListMobile,
   SubHeader,
+  SubHeaderInner,
+  SubHeaderLeft,
+  SubHeaderText,
   WaypointContainer,
 } from './styled';
 
@@ -74,7 +79,32 @@ const Nav = ({
   const [item1, item2, item3, item4] = items;
   return (
     <Fragment>
-      <SubHeader />
+      <SubHeader>
+        <SubHeaderInner>
+          <SubHeaderLeft>
+            <DeskphoneIcon
+              color="white"
+              size={25}
+            />
+            <SubHeaderText>
+              TEL. 03496 42-9429
+            </SubHeaderText>
+          </SubHeaderLeft>
+          <a
+            href="https://www.facebook.com/Las4Bfiambresyembutidos/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <SubHeaderText>
+              FACEBOOK
+            </SubHeaderText>
+            <FacebookIcon
+              color="white"
+              size={25}
+            />
+          </a>
+        </SubHeaderInner>
+      </SubHeader>
       <NavList small={small}>
         <List>
           {[item1, item2].map(renderNavItem(small))}

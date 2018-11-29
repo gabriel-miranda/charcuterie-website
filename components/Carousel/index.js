@@ -4,10 +4,19 @@ import { colors } from 'theme';
 import Button from 'components/Button';
 import Overlay from 'components/Overlay';
 import ProductCard from 'components/ProductCard';
+import SectionTitle from 'components/SectionTitle';
+import SectionDescription from 'components/SectionDescription';
 import StyledCarousel, { ProductContainer } from './styled';
 
 const Carousel = ({ products }) => (
   <StyledCarousel>
+    <SectionTitle light>
+      Nuestros productos
+    </SectionTitle>
+    <SectionDescription light>
+      Fiambres que se destacan por su noble sabor y genuina calidad. <br />
+      Lorem ipsum dolor sit amet
+    </SectionDescription>
     <Overlay>
       <ProductContainer>
         {products.map(ProductCard)}

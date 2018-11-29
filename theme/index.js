@@ -81,7 +81,7 @@ export const sizes = {
     },
     margin: {
       big: '30px 50px',
-      small: '20px 50px',
+      small: '10px 50px',
     },
   },
   hero: {
@@ -169,7 +169,7 @@ export const sizes = {
     width: '55px',
   },
   carousel: {
-    padding: SIZES.main_padding.big,
+    padding: '75px',
   },
   catalog: {
     padding: {
@@ -179,16 +179,12 @@ export const sizes = {
     margin: `0 -${SIZES.product_margin}`,
   },
   contact: {
-    width: '650px',
+    width: '600px',
     margin: '0 auto 100px',
-    padding: {
-      big: `0 ${SIZES.main_padding.big}`,
-      small: `0 ${SIZES.main_padding.small}`,
-    },
   },
   footer: {
     width: SIZES.container,
-    padding: `0 ${SIZES.main_padding.small}`,
+    padding: `0 ${SIZES.main_padding.big}`,
   },
   subfooter: {
     height: `${SIZES.subheader.height}px`,
@@ -198,7 +194,7 @@ export const sizes = {
   },
   input: {
     width: '100%',
-    lheight: '50px',
+    lheight: '45px',
     padding: '0 20px',
     radius: '5px',
     margin_bottom: '30px',
@@ -337,7 +333,7 @@ export const positions = {
 
 export const zindex = {
   hero_content: 1,
-  nav: 2,
+  nav: 5,
   subheader: 2,
   loading_bar: 999,
 };
@@ -353,7 +349,7 @@ export const borders = {
   subheader: `1px solid ${COLORS.white_40}`,
   nav_item: `${sizes.nav.item.border}px solid`,
   button: '1px solid',
-  subfooter: `1px solid ${COLORS.white}`,
+  subfooter: `1px solid ${COLORS.white_70}`,
   input: '1px solid',
   card_title: `1px solid ${COLORS.white}`,
 };

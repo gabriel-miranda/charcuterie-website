@@ -12,20 +12,9 @@ const Home = ({ products }) => (
   <Fragment>
     <Hero />
     <AboutUs full={false} />
-    <Section small>
-      <SectionBlock center>
-        <SectionTitle>
-          Nuestros productos
-        </SectionTitle>
-        <SectionDescription>
-          Fiambres que se destacan por su <em>noble sabor y genuina calidad</em>. <br />
-          Lorem ipsum dolor sit amet
-        </SectionDescription>
-      </SectionBlock>
-    </Section>
     <Carousel products={products} />
-    <Section small>
-      <SectionBlock center>
+    <Section small center>
+      <SectionBlock>
         <SectionTitle>
           Contacto
         </SectionTitle>
@@ -33,9 +22,9 @@ const Home = ({ products }) => (
           Fiambres que se destacan por su <em>noble sabor y genuina calidad</em>. <br />
           Lorem ipsum dolor sit amet
         </SectionDescription>
+        <ContactForm />
       </SectionBlock>
     </Section>
-    <ContactForm />
   </Fragment>
 );
 

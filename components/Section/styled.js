@@ -11,13 +11,13 @@ export default styled.section`
   flex-direction: column;
   max-width: 100%;
   text-align: center;
-  overflow: hidden;
-  background: ${'none' || colors.section.bg};
+  position: relative;
+  background: ${colors.section.bg};
   padding: ${({ small }) => small ? sizes.section.padding_mobile.small : sizes.section.padding_mobile.big};
-  width: ${sizes.section.width};
+  width: ${({ center }) => center ? '100%' : sizes.section.width};
   ${media.md`
     padding: ${({ small }) => small ? sizes.section.padding.small : sizes.section.padding.big};
-    text-align: left;
+    text-align: ${({ center }) => center ? 'center' : 'left'};
     flex-direction: row;
   `}
 `;
@@ -29,8 +29,6 @@ export const StyledSectionBlock = styled.div`
   flex-shrink: 1;
   padding: 0;
   ${media.md`
-    text-align: ${({ center }) => center ? 'center' : 'left'};
-    padding: 0 ${sizes.section.block.padding.big};
     flex-direction: row;
     padding: 0 ${sizes.section.block.padding.big} 0 0;
     &:nth-last-of-type(1) {

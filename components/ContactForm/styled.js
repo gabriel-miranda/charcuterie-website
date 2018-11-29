@@ -1,16 +1,12 @@
 import styled from 'styled-components';
 import {
-  media,
   sizes,
 } from 'theme';
 
 export default styled.form`
   text-align: center;
-  width: ${sizes.contact.width};
-  margin: ${sizes.contact.margin};
+  width: ${({ center }) => center ? sizes.contact.width : '100%'};
+  margin: ${({ center }) => center ? sizes.contact.margin : '0'};
   max-width: 100%;
-  padding: ${sizes.contact.padding.small};
-  ${media.md`
-    padding: ${({ center }) => center ? sizes.contact.padding.big : '0'};
-  `}
+  padding: 0;
 `;

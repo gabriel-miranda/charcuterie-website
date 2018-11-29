@@ -12,7 +12,9 @@ export default styled.h2`
   margin: ${sizes.section.title.padding};
   font-weight: ${sizes.section.title.weight};
   letter-spacing: ${sizes.section.title.lspacing};
+  color: ${({ light }) => light ? '#fff' : colors.section.title};
   text-transform: uppercase;
+  z-index: 2;
   &:after {
     content: '';
     position: absolute;
@@ -20,6 +22,6 @@ export default styled.h2`
     left: 0;
     height: ${sizes.section.title.border.height};
     width: ${sizes.section.title.border.width};
-    background: ${colors.section.title};
+    background: ${({ light }) => light ? '#fff' : colors.section.title};
   }
 `;
