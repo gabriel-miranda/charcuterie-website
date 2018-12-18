@@ -6,6 +6,7 @@ const sslRedirect = require('heroku-ssl-redirect');
 const bodyParser = require('body-parser');
 const { api } = require('./api');
 const { contentfulMiddleware } = require('./middlewares/contentful');
+const { slashesMiddleware } = require('./middlewares/slashes');
 const ContentfulWrapper = require('../modules/contentful');
 const {
   PORT,
@@ -35,6 +36,8 @@ const contentful = new ContentfulWrapper({
   server.use(compression());
 
   server.use(bodyParser.json());
+
+  server.use(slashesMiddleware(false));
 
   server.use(contentfulMiddleware({ contentful }));
 
