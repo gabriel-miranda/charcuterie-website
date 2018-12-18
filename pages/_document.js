@@ -26,11 +26,8 @@ export default class MyDocument extends Document {
           />
           <link
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"
-          />
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700"
+            type="text/css"
+            href="/api/fonts"
           />
           {this.props.styleTags}
         </Head>

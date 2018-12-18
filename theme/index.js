@@ -72,7 +72,7 @@ export const sizes = {
   screen: {
     sm: 500,
     md: 900,
-    lg: 1200,
+    lg: 1500,
   },
   logo: {
     width: {

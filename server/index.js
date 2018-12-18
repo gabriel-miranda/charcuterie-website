@@ -3,6 +3,7 @@ const next = require('next');
 const express = require('express');
 const compression = require('compression');
 const sslRedirect = require('heroku-ssl-redirect');
+const bodyParser = require('body-parser');
 const { api } = require('./api');
 const { contentfulMiddleware } = require('./middlewares/contentful');
 const ContentfulWrapper = require('../modules/contentful');
@@ -32,6 +33,8 @@ const contentful = new ContentfulWrapper({
   server.use(sslRedirect(['production'], 301));
 
   server.use(compression());
+
+  server.use(bodyParser.json());
 
   server.use(contentfulMiddleware({ contentful }));
 

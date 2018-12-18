@@ -4,7 +4,7 @@ import { media, sizes } from 'theme';
 export default styled.div`
   width: 100%;
   margin: 0 auto;
-  ${media.lg`
+  ${media.md`
     width: ${sizes.screen.desktop}px;
   `}
 `;

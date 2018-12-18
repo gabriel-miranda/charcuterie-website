@@ -17,6 +17,12 @@
     },
     "CACHE_MAX_AGE": {
       "required": false
+    },
+    "EMAIL_KEY": {
+      "required": true
+    },
+    "EMAIL": {
+      "required": true
     }
   },
   "formation": {

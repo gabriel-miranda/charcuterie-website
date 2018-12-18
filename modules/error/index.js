@@ -3,7 +3,7 @@ const HttpStatus = require('http-status-codes');
 class ApiError {
   constructor(statusCode, message) {
     this.statusCode = statusCode;
-    this.message = message || HttpStatus.getStatusTexts(statusCode);
+    this.message = message || HttpStatus.getStatusText(statusCode);
   }
 }
 
@@ -19,7 +19,15 @@ class Unauthorized extends ApiError {
   }
 }
 
+class BadRequest extends ApiError {
+  constructor() {
+    super(HttpStatus.BAD_REQUEST);
+  }
+}
+
+
 module.exports = {
   ServerError,
   Unauthorized,
+  BadRequest,
 };
