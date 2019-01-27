@@ -1,9 +1,11 @@
 require('dotenv').config();
+const path = require('path');
 const next = require('next');
 const express = require('express');
 const compression = require('compression');
 const sslRedirect = require('heroku-ssl-redirect');
 const bodyParser = require('body-parser');
+const favicon = require('serve-favicon');
 const { api } = require('./api');
 const { contentfulMiddleware } = require('./middlewares/contentful');
 const { slashesMiddleware } = require('./middlewares/slashes');
@@ -30,6 +32,8 @@ const contentful = new ContentfulWrapper({
 (async () => {
   await app.prepare();
   const server = express();
+
+  server.use(favicon(path.join(__dirname, '../static', 'favicon.ico')));
 
   server.use(sslRedirect(['production'], 301));
 

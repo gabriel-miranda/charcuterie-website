@@ -3,7 +3,7 @@ import ApiClient from './index';
 
 class Client extends ApiClient {
   constructor(req) {
-    super(BASE_URL, { cacheEnabled: Boolean(req) });
+    super(`${BASE_URL}/api`, { cacheEnabled: Boolean(req) });
   }
 
   menu = {

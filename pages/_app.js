@@ -2,6 +2,7 @@ import App, { Container } from 'next/app';
 import React from 'react';
 import Layout from 'components/Layout';
 import LoadingBar from 'components/LoadingBar';
+import Head from 'components/Head';
 import Client from 'modules/client/main';
 import { createGlobalStyle } from 'styled-components';
 import { Normalize } from 'styled-normalize';
@@ -95,6 +96,7 @@ class MyApp extends App {
 
     return (
       <Container>
+        <Head />
         <Normalize />
         <GlobalStyle />
         <LoadingBar />
