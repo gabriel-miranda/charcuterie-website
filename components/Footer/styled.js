@@ -39,6 +39,7 @@ export const FooterItem = styled.div`
   }
   ${media.md`
     width: auto;
+    min-width: 120px;
   `}
 `;
 
