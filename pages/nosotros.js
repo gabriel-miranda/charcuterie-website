@@ -5,6 +5,6 @@ import AboutUs from 'components/AboutUs';
 export default () => (
   <Fragment>
     <Hero small />
-    <AboutUs readmore={false} />
+    <AboutUs />
   </Fragment>
 );
